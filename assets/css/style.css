@@ -1,0 +1,159 @@
+/* Bootstrap v4.3.1 (https://getbootstrap.com/) */
+:root {
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: normal;
+  background: #fafafa;
+  color: gray;
+}
+
+a {
+  transition: .3s all ease;
+  font-weight: bold;
+  color: #062172;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.ftco-navbar-light {
+  background: #fdcd01 !important;
+  z-index: 3;
+  padding: 0; /* Retirer le padding vertical par défaut */
+  position: sticky !important;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+  font-size: 13px;
+  padding: 0.75rem 20px; /* Réduire le padding vertical */
+  font-weight: 800;
+  color: #062172;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #062172;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out;
+  z-index: -1;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover:before {
+  visibility: visible;
+  background-color: #062172;
+  transform: scaleX(1);
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item.active > a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item.active > a:before {
+  visibility: visible;
+  background-color: #062172;
+  transform: scaleX(1);
+}
+
+/* @media (max-width: 991.98px) {
+  .ftco-navbar-light {
+    padding: 0px 15px; 
+  }
+
+  .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    font-size: 12px;
+    padding: 0.5rem 10px; 
+  }
+
+  .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover:before {
+    visibility: hidden;
+  }
+
+  .ftco-navbar-light .navbar-nav > .nav-item.active > a:before {
+    visibility: hidden;
+  }
+} */
+
+.navbar-brand {
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.navbar-toggler {
+  border: none;
+  color: rgba(255, 255, 255, 0.5) !important;
+  cursor: pointer;
+  padding-right: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: .1em;
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Style pour les boutons de navigation */
+.navbar-toggler.menu-button, .navbar-toggler.close-button {
+  position: relative;
+  z-index: 1051; /* Assurez-vous que les boutons sont au-dessus du contenu */
+  color: #fff;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+}
+
+/* Masquer les boutons de menu et de fermeture par défaut */
+.navbar-toggler {
+  display: none;
+}
+
+/* Afficher les boutons en mode mobile */
+/* @media (max-width: 991.98px) {
+  .navbar-toggler {
+    display: block;
+  } */
+  /* .navbar-toggler.close-button {
+    display: none; /* Cacher le bouton de fermeture par défaut en mode mobile */
+  } */
+/*   .navbar-toggler.close-button.d-block {
+    display: block; */ /* Afficher le bouton lorsque le menu est ouvert */
+  }
+}
